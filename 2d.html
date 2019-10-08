@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Igor's Portfolio Site - Digital Works</title>
+	<link href="styles.css" rel="stylesheet" type="text/css">
+	<script>
+		function showModal(modalSource) {// Get the modal
+			var modal = document.getElementById("thumb-modal");
+			var modalContent = document.getElementById("full-content");
+				modal.style.display = 'block';
+				modalContent.src = modalSource;
+				
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+				modal.style.display = "none";
+				modalContent.src = "";
+			}
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+					modalContent.src = "";
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="page-body">
+		<div class="spacer"></div>
+		<div class="container">
+			<div class="navbar">
+				<a class="navbar-logo" href="index.html"><img class="logo" src="src/images/banner.png"></a>
+				<a href="index.html">Home</a>
+				<div class="dropdown">
+					<form action="digital-works.html"><button id="active-tab" class="dropbtn" type="submit">Digital Works</button></form>
+					<div class="dropdown-content">
+						<a href="animation.html">Animation</a>
+						<a href="2d.html">2D</a>
+						<a href="3d.html">3D</a>
+						<a href="gamedev.html">Game Dev</a>
+					</div>
+				</div>
+				<a href="physical-works.html">Physical Works</a>
+				<a href="about-me.html">About Me</a>
+			</div>
+			<div class="section">
+				<div class="thumbnail-container">
+					<img class="thumbnail" src="src/images/artwork/Outrun_thumb.png" alt="Outrun" onclick="showModal('src/images/artwork/Outrun.png');">
+					<h5>Click the thumbnail to view the full image</h5>
+				</div>
+				<h1 class="clickable" onclick="showModal('src/images/artwork/Outrun.png');">Outrun</h1>
+				<p><b>Medium: </b>Vector Graphics (Adobe Illustrator)</p>
+				<br>
+				<p>Recently I've been fascinated by the retro culture of the 1980s, and the retro trend has been getting very popular in pop-culture. It's quite obvious why: while some of it might simply be nostalgia, the synthesiser music of the era is very melodic, the films are cheesy with heavily romanticised characters, and the graphics are bold and memorable, often stylised with heavy use of neon lights and colours.</p>
+				<p>This piece is intended to be used as a wallpaper and is an exercise in vector linework and gradients to reproduce a recognisable art style.</p>
+			</div>
+			<div class="section">
+				<div class="thumbnail-container">
+					<img class="thumbnail" src="src/images/artwork/Cityscape_thumb.png" alt="Cityscape" onclick="showModal('src/images/artwork/Cityscape.png');">
+					<h5>Click the thumbnail to view the full image</h5>
+				</div>
+				<h1 class="clickable" onclick="showModal('src/images/artwork/Cityscape.png');">Cityscape</h1>
+				<p><b>Medium: </b>Vector Graphics (Adobe Illustrator)</p>
+				<br>
+				<p>This piece is an exercise in using basic shapes, lines, and grayscale tones to create an impression of a looming cityscape without fully rendering the individual buildings.</p>
+				<p>This artwork was created as part of the Digital Media course at CQUniversity.</p>
+			</div>
+			<div class="section">
+				<div class="thumbnail-container">
+					<img class="thumbnail" src="src/images/artwork/Apple_thumb.png" alt="Vector Apple" onclick="showModal('src/images/artwork/Apple.png');">
+					<h5>Click the thumbnail to view the full image</h5>
+				</div>
+				<h1 class="clickable" onclick="showModal('src/images/artwork/Apple.png');">Vector Apple</h1>
+				<p><b>Medium: </b>Vector Graphics (Adobe Illustrator)</p>
+				<br>
+				<p>This piece is an exercise in using Adobe Illustrator's grid tool to recreate an organic shape (in this case, an apple). While oftentimes vector graphics are used for fairly basic or stylised shapes and gradients, this exercise proves that it is quite possible to render more realistic objects as well.</p>
+				<p>This artwork was created as part of the Digital Media course at CQUniversity.</p>
+			</div>
+			<div class="section">
+				<div class="thumbnail-container">
+					<img class="thumbnail" src="src/images/artwork/DungeonDash_thumb.png" alt="Dungeon Dash Concept Artwork" onclick="showModal('src/images/artwork/DungeonDash.png');">
+					<h5>Click the thumbnail to view the full image</h5>
+				</div>
+				<h1 class="clickable" onclick="showModal('src/images/artwork/DungeonDash.png');">Dungeon Dash Concept Artwork</h1>
+				<p><b>Medium: </b>Raster Graphics (Adobe Photoshop)</p>
+				<br>
+				<p>These are some of the examples of concept artwork developed for a video game called Dungeon Dash. The game is a fairly basic dungeon crawler where the player dons a suit of knight armour and attempts to escape a dungeon, getting rich and potentially saving a princess in the process. The concept art was used for developing a paper prototype for the game and was partly inspired by artwork for the <i>Munchkin</i> board game.</p>
+				<p>This artwork was created as part of the Digital Media course at CQUniversity.</p>
+			</div>
+			<div class="section">
+				<div class="thumbnail-container">
+					<img class="thumbnail" src="src/images/artwork/Joker_thumb.png" alt="Pixel Art Joker" onclick="showModal('src/images/artwork/Joker.png');">
+					<h5>Click the thumbnail to view the full image</h5>
+				</div>
+				<h1 class="clickable" onclick="showModal('src/images/artwork/Joker.png');">Pixel Art Joker</h1>
+				<p><b>Medium: </b>Raster Graphics (Paint.Net)</p>
+				<br>
+				<p>At one point I was very interested in pixel art. This was in part due to the prevalence of indie games that used this art style for sprites and tiles, but also because of its extremely minimalist approach to rendering objects. It is deeply fascinating that the human eye can interpret a handful of pixels as vehicles, plants, and creatures.</p>
+				<p>This is a pixel art rendition of Heath Ledger's Joker from <i>The Dark Knight</i>. Originally only 44 pixels long and wide, this work depicts the Joker sitting in the GCPD interrogation room with Batman standing behind him, ready to begin the "questioning".</p>
+			</div>
+			<!-- The Modal -->
+			<div id="thumb-modal" class="modal">
+			
+				<!-- The Close Button -->
+				<span class="close">&times;</span>
+
+				<!-- Modal Content (The Image) -->
+				<img class="modal-content" id="full-content">
+			</div>
+		</div>
+	</div>
+</body>

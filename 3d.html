@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Igor's Portfolio Site - Digital Works</title>
+	<link href="styles.css" rel="stylesheet" type="text/css">
+	<script>
+		function showModal(modalSource) {// Get the modal
+			var modal = document.getElementById("thumb-modal");
+			var modalContent = document.getElementById("full-modal");
+				modalContent.src = modalSource;
+				modal.style.display = 'block';
+				
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+				modal.style.display = "none";
+				modalContent.src = "";
+			}
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+					modalContent.src = "";
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="page-body">
+		<div class="spacer"></div>
+		<div class="container">
+			<div class="navbar">
+				<a class="navbar-logo" href="index.html"><img class="logo" src="src/images/banner.png"></a>
+				<a href="index.html">Home</a>
+				<div class="dropdown">
+					<form action="digital-works.html"><button id="active-tab" class="dropbtn" type="submit">Digital Works</button></form>
+					<div class="dropdown-content">
+						<a href="animation.html">Animation</a>
+						<a href="2d.html">2D</a>
+						<a href="3d.html">3D</a>
+						<a href="gamedev.html">Game Dev</a>
+					</div>
+				</div>
+				<a href="physical-works.html">Physical Works</a>
+				<a href="about-me.html">About Me</a>
+			</div>
+			<div class="section">
+				<div class="thumbnail-container">
+					<img class="thumbnail" src="src/images/artwork/Scrapgun_thumb.png" alt="Scrapgun Thumbnail" style="width:100%;max-width:300px" onclick="showModal('https://sketchfab.com/models/b129ea31af5c448a93290469fec221c6/embed?camera=0');">
+					<h5>Click the thumbnail to view the model</h5>
+				</div>
+				<h1 class="clickable" onclick="showModal('https://sketchfab.com/models/b129ea31af5c448a93290469fec221c6/embed?camera=0');">Scrapgun</h1>
+				<p><b>Medium: </b>3D Graphics (Autodesk Maya)</p>
+				<br>
+				<p>The Scrapgun is based on Ork Shoota designs from <i>Warhammer 40,000</i>. Its rough and blocky construction made it simple to recreate in 3d using the box modelling method. I decided to try a low-poly approach with this model, meaning it is created with as few polygons as possible.</p>
+			</div>
+			<div class="section">
+				<div class="thumbnail-container">
+					<img class="thumbnail" src="src/images/artwork/CrudeAxe_thumb.png" alt="Crude Axe Thumbnail" style="width:100%;max-width:300px" onclick="showModal('https://sketchfab.com/models/d0e553d8a97645fca724543453589017/embed');">
+					<h5>Click the thumbnail to view the model</h5>
+				</div>
+				<h1 class="clickable" onclick="showModal('https://sketchfab.com/models/d0e553d8a97645fca724543453589017/embed');">Crude Axe</h1>
+				<p><b>Medium: </b>3D Graphics (Autodesk Maya)</p>
+				<br>
+				<p>This model is based on another Ork weapon from <i>Warhammer 40,000</i> – the Choppa. These come in all shapes and flavours, but they share something in common: they can be made out of virtually any piece of scrap and are used in a vaguely chopping or slashing manner. This one is crudely shaped like an axe and comes with an electric surprise.</p>
+			</div>
+			<div class="section">
+				<div class="thumbnail-container">
+					<img class="thumbnail" src="src/images/artwork/PunkHead_thumb.png" alt="Punk Head Thumbnail" style="width:100%;max-width:300px" onclick="showModal('https://sketchfab.com/models/4a5c6c9ad6a54ddb975d1b380a2079cb/embed');">
+					<h5>Click the thumbnail to view the model</h5>
+				</div>
+				<h1 class="clickable" onclick="showModal('https://sketchfab.com/models/4a5c6c9ad6a54ddb975d1b380a2079cb/embed');">Punk Head</h1>
+				<p><b>Medium: </b>3D Graphics (Autodesk Maya)</p>
+				<br>
+				<p>This punk head is an exercise in modelling a human head and developing a personality, as well as unwrapping and texturing an organic shape.</p>
+				<p>This model was created as part of the Digital Media course at CQUniversity.</p>
+			</div>
+			<div class="section">
+				<div class="thumbnail-container">
+					<img class="thumbnail" src="src/images/artwork/Jumper_thumb.png" alt="Punk Head Thumbnail" style="width:100%;max-width:300px" onclick="showModal('https://sketchfab.com/models/cdcfed7766f340df894c7c4d18c51ac7/embed');">
+					<h5>Click the thumbnail to view the model</h5>
+				</div>
+				<h1 class="clickable" onclick="showModal('https://sketchfab.com/models/cdcfed7766f340df894c7c4d18c51ac7/embed');">Jumper</h1>
+				<p><b>Medium: </b>3D Graphics (Autodesk Maya)</p>
+				<br>
+				<p>A step up from the Punk Head, the Jumper is an exercise in creating an entire humanoid model. Though it is not visible in a browser, this model is fully rigged and ready for posing and/or animating.</p>
+				<p>This model was created as part of the Digital Media course at CQUniversity.</p>
+			</div>
+			<!-- The Modal -->
+			<div id="thumb-modal" class="modal">
+			
+				<!-- The Close Button -->
+				<span class="close">&times;</span>
+				
+				<!-- Modal Content -->
+				<div class="modal-content-iframe">
+					<iframe id="full-modal" title="A 3D model" width="640" height="480" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+				</div>
+			</div>	
+		</div>
+	</div>
+</body>

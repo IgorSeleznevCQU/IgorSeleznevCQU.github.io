@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Igor's Portfolio Site - Digital Works</title>
+	<link href="styles.css" rel="stylesheet" type="text/css">
+	<script>
+		function showModal(modalSource) {// Get the modal
+			var modal = document.getElementById("thumb-modal");
+			var modalContent = document.getElementById("full-modal");
+				modalContent.src = modalSource;
+				modal.style.display = 'block';
+				
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+				modal.style.display = "none";
+				modalContent.src = "";
+			}
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+					modalContent.src = "";
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="page-body">
+		<div class="spacer"></div>
+		<div class="container">
+			<div class="navbar">
+				<a class="navbar-logo" href="index.html"><img class="logo" src="src/images/banner.png"></a>
+				<a href="index.html">Home</a>
+				<div class="dropdown">
+					<form action="digital-works.html"><button id="active-tab" class="dropbtn" type="submit">Digital Works</button></form>
+					<div class="dropdown-content">
+						<a href="animation.html">Animation</a>
+						<a href="2d.html">2D</a>
+						<a href="3d.html">3D</a>
+						<a href="gamedev.html">Game Dev</a>
+					</div>
+				</div>
+				<a href="physical-works.html">Physical Works</a>
+				<a href="about-me.html">About Me</a>
+			</div>
+			<div class="section">
+				<div class="thumbnail-container">
+					<img class="thumbnail" src="src/images/artwork/Exercises_thumb.png" alt="Various Exercises Thumbnail" style="width:100%;max-width:300px" onclick="showModal('https://player.vimeo.com/video/232289974');">
+					<h5>Click the thumbnail to view the animation</h5>
+				</div>
+				<h1 class="clickable" onclick="showModal('https://player.vimeo.com/video/232289974');">Various Exercises</h1>
+				<p><b>Medium: </b>Frame-by-Frame Animation (Adobe Photoshop), Digital Animation (Adobe After Effects)</p>
+				<br>
+				<p>These animations are an exercise in developing fluid movement in different media - the animations created in Adobe Photoshop are representative of the original style of animation, where every frame is drawn by hand, whereas the Adobe After Effects animations are created by assigning keyframes to individual elements' properties, such as position, scale, and rotation. The action in these animations is somewhat exaggerated and shows plenty of squash &amp; stretch, overlapping action, and follow through to make the animation more readable.</p>
+				<p>These animations were created as part of the Digital Media course at CQUniversity.</p>
+			</div>
+			<div class="section">
+				<div class="thumbnail-container">
+					<img class="thumbnail" src="src/images/artwork/WalkCycle_thumb.png" alt="Walk Cycle Thumbnail" style="width:100%;max-width:300px" onclick="showModal('https://player.vimeo.com/video/362941366');">
+					<h5>Click the thumbnail to view the animation</h5>
+				</div>
+				<h1 class="clickable" onclick="showModal('https://player.vimeo.com/video/362941366');">Walk Cycle</h1>
+				<p><b>Medium: </b>Digital Animation (Adobe After Effects)</p>
+				<br>
+				<p>This animation is a somewhat cartoony representation of a marching person. Animating a human figure is somewhat difficult because any unnatural movement will be painfully obvious to the viewer. This animation can also be looped indefinitely.</p>
+				<p>This animation was created as part of the Digital Media course at CQUniversity.</p>
+			</div>
+			<div class="section">
+				<div class="thumbnail-container">
+					<img class="thumbnail" src="src/images/artwork/StudySpace_thumb.png" alt="Study Space Animatic Thumbnail" style="width:100%;max-width:300px" onclick="showModal('https://player.vimeo.com/video/362941390');">
+					<h5>Click the thumbnail to view the animation</h5>
+				</div>
+				<h1 class="clickable" onclick="showModal('https://player.vimeo.com/video/362941390');">Study Space Animatic</h1>
+				<p><b>Medium: </b>Digital Animation (Adobe After Effects)</p>
+				<br>
+				<p>This animatic explains how to create a study space. It is done in a minimalistic style and includes a voiceover and simple sound effects.</p>
+				<p>This animation was created as part of the Digital Media course at CQUniversity.</p>
+			</div>
+			<div class="section">
+				<div class="thumbnail-container">
+					<img class="thumbnail" src="src/images/artwork/PopUpTown_thumb.png" alt="Pop-Up Town Thumbnail" style="width:100%;max-width:300px" onclick="showModal('https://player.vimeo.com/video/362941271');">
+					<h5>Click the thumbnail to view the animation</h5>
+				</div>
+				<h1 class="clickable" onclick="showModal('https://player.vimeo.com/video/362941271');">Pop-Up Town</h1>
+				<p><b>Medium: </b>Digital Animation (Adobe After Effects)</p>
+				<br>
+				<p>This is a heavily stylised animatic that utilises lots of minor action to create an eye-catching animation similar to something that can be seen in adverts.</p>
+				<p>This animation was created as part of the Digital Media course at CQUniversity.</p>
+			</div>
+			<!-- The Modal -->
+			<div id="thumb-modal" class="modal">
+			
+				<!-- The Close Button -->
+				<span class="close">&times;</span>
+				
+				<!-- Modal Content -->
+				<div class="modal-content-iframe">
+					<iframe id="full-modal" title="A 3D model" width="640" height="480" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+				</div>
+			</div>	
+		</div>
+	</div>
+</body>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Igor's Portfolio Site - Digital Works</title>
+	<link href="styles.css" rel="stylesheet" type="text/css">
+	<script>
+		function showModal(modalSource) {// Get the modal
+			var modal = document.getElementById("thumb-modal");
+			var modalContent = document.getElementById("full-content");
+				modal.style.display = 'block';
+				modalContent.src = modalSource;
+				
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+				modal.style.display = "none";
+				modalContent.src = "";
+			}
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+					modalContent.src = "";
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="page-body">
+		<div class="spacer"></div>
+		<div class="container">
+			<div class="navbar">
+				<a class="navbar-logo" href="index.html"><img class="logo" src="src/images/banner.png"></a>
+				<a href="index.html">Home</a>
+				<div class="dropdown">
+					<form action="digital-works.html"><button class="dropbtn" type="submit">Digital Works</button></form>
+					<div class="dropdown-content">
+						<a href="animation.html">Animation</a>
+						<a href="2d.html">2D</a>
+						<a href="3d.html">3D</a>
+						<a href="gamedev.html">Game Dev</a>
+					</div>
+				</div>
+				<a id="active-tab" href="physical-works.html">Physical Works</a>
+				<a href="about-me.html">About Me</a>
+			</div>
+			<div class="section">
+				<div class="thumbnail-container">
+					<img class="thumbnail-portrait" src="src/images/artwork/NatureMorte_thumb.png" alt="Nature Morte" onclick="showModal('src/images/artwork/NatureMorte.jpg');">
+					<h5>Click the thumbnail to view the full image</h5>
+				</div>
+				<h1 class="clickable" onclick="showModal('src/images/artwork/NatureMorte.jpg');">Nature Morte</h1>
+				<p><b>Medium: </b>Pencil</p>
+				<br>
+				<p>Nature Morte, or Still Life, is a well-known exercise in depicting a group of commonplace objects. Being able to realistically convey shapes and tones of something people see every day is a very prized skill.</p>
+				<p>This artwork was created as part of the Digital Media course at CQUniversity.</p>
+			</div>
+			<div class="section">
+				<div class="thumbnail-container">
+					<img class="thumbnail-portrait" src="src/images/artwork/SelfPortrait_thumb.png" alt="Self-Portrait" onclick="showModal('src/images/artwork/SelfPortrait.jpg');">
+					<h5>Click the thumbnail to view the full image</h5>
+				</div>
+				<h1 class="clickable" onclick="showModal('src/images/artwork/SelfPortrait.jpg');">Self-Portrait</h1>
+				<p><b>Medium: </b>Pencil</p>
+				<br>
+				<p>This piece was created towards the end of my physical art course at CQU. Compared to my first attempt at drawing a self-portrait (which I dare not display here), this is a massive improvement. It is very difficult to depict a realistic human face without sliding into the uncanny valley, and I am quite happy with the result.</p>
+				<p>This artwork was created as part of the Digital Media course at CQUniversity.</p>
+			</div>
+			<div class="section">
+				<div class="thumbnail-container">
+					<img class="thumbnail-portrait" src="src/images/artwork/ChessGame_thumb.png" alt="Chess Game" onclick="showModal('src/images/artwork/ChessGame.jpg');">
+					<h5>Click the thumbnail to view the full image</h5>
+				</div>
+				<h1 class="clickable" onclick="showModal('src/images/artwork/ChessGame.jpg');">Chess Game</h1>
+				<p><b>Medium: </b>Pencil</p>
+				<br>
+				<p>This is a one-point perspective piece depicting a chess game that has been disturbed, with the grandfather clock looming ominously over the board. It was very challenging trying to draw the chess pieces in perspective, but I had fun with this piece nonetheless.</p>
+				<p>This artwork was created as part of the Digital Media course at CQUniversity.</p>
+			</div>
+			<!-- The Modal -->
+			<div id="thumb-modal" class="modal">
+			
+				<!-- The Close Button -->
+				<span class="close">&times;</span>
+
+				<!-- Modal Content (The Image) -->
+				<img class="modal-content" id="full-content">
+			</div>
+		</div>
+	</div>
+</body>

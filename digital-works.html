@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Igor's Portfolio Site - Digital Works</title>
+	<link href="styles.css" rel="stylesheet" type="text/css">
+	<script>
+		function hover(element) {
+			if (element.classList.contains("animation"))
+				{
+					element.setAttribute('src', 'src/images/animation-colour.png');
+				}
+			else if (element.classList.contains("art-2d"))
+				{
+					element.setAttribute('src', 'src/images/2d-colour.png');
+				}
+			else if (element.classList.contains("art-3d"))
+				{
+					element.setAttribute('src', 'src/images/3d-colour.png');
+				}
+			else if (element.classList.contains("gamedev"))
+				{
+					element.setAttribute('src', 'src/images/gamedev-colour.png');
+				}
+		}
+		function unhover(element) {
+			if (element.classList.contains("animation"))
+				{
+					element.setAttribute('src', 'src/images/animation.png');
+				}
+			else if (element.classList.contains("art-2d"))
+				{
+					element.setAttribute('src', 'src/images/2d.png');
+				}
+			else if (element.classList.contains("art-3d"))
+				{
+					element.setAttribute('src', 'src/images/3d.png');
+				}
+			else if (element.classList.contains("gamedev"))
+				{
+					element.setAttribute('src', 'src/images/gamedev.png');
+				}
+		}
+	</script>
+</head>
+<body>
+	<div class="page-body">
+		<div class="spacer"></div>
+		<div class="container" style="height: 96%;">
+			<div class="navbar">
+				<a class="navbar-logo" href="index.html"><img class="logo" src="src/images/banner.png"></a>
+				<a href="index.html">Home</a>
+				<div class="dropdown">
+					<form action="digital-works.html"><button id="active-tab" class="dropbtn" type="submit">Digital Works</button></form>
+					<div class="dropdown-content">
+						<a href="animation.html">Animation</a>
+						<a href="2d.html">2D</a>
+						<a href="3d.html">3D</a>
+						<a href="gamedev.html">Game Dev</a>
+					</div>
+				</div>
+				<a href="physical-works.html">Physical Works</a>
+				<a href="about-me.html">About Me</a>
+			</div>
+			<div class="link-block animation">
+				<a href="animation.html">
+					<img class="linked-image animation" src="src/images/animation.png" onmouseover="hover(this);" onmouseout="unhover(this);">
+				</a>
+			</div>
+			<div class="link-block art-2d">
+				<a href="2d.html">
+					<img class="linked-image art-2d" src="src/images/2d.png" onmouseover="hover(this);" onmouseout="unhover(this);">
+				</a>
+			</div>
+			<div class="link-block art-3d">
+				<a href="3d.html">
+					<img class="linked-image art-3d" src="src/images/3d.png" onmouseover="hover(this);" onmouseout="unhover(this);">
+				</a>
+			</div>
+			<div class="link-block gamedev">
+				<a href="gamedev.html">
+					<img class="linked-image gamedev" src="src/images/gamedev.png" onmouseover="hover(this);" onmouseout="unhover(this);">
+				</a>
+			</div>
+		</div>
+	</div>
+</body>
