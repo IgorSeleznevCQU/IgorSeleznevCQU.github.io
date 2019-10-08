@@ -1,2 +1,2 @@
 # IgorSeleznevCQU.github.io
-Shafted! game
+Igor Seleznev's Portfolio Site
